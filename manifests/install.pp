@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-class apache::install {
-  package { "${apache::install_name}":
-    ensure => $apache::install_ensure,
-  }
-=======
-# @summary A short summary of the purpose of this class
 #
 # A description of what this class does
 #
@@ -12,12 +5,7 @@ class apache::install {
 #   include apache::install
 class apache::install {
     
-      package { 'httpd':
-        ensure  => 'present',
-     
+      package { "${apache::install_name}":
+        ensure  => "$apache::install_ensure",
       }
-
-
-
->>>>>>> parent of 9355187... Added params for Redhat & Debian version2
 }
